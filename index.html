@@ -241,10 +241,19 @@ body {
 }
 
 .nav-card .icon {
-  font-size: 2.5rem;
-  margin-bottom: 0.8rem;
+  width: 56px;
+  height: 56px;
+  margin: 0 auto 0.8rem;
   display: block;
   position: relative;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--glass-border);
+  transition: border-color 0.4s;
+}
+
+.nav-card:hover .icon {
+  border-color: var(--accent);
 }
 
 .nav-card .name {
@@ -293,15 +302,11 @@ body {
 }
 
 .insect-header .icon {
-  font-size: 2.5rem;
-  width: 60px;
-  height: 60px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: var(--glass);
-  border: 1px solid var(--glass-border);
+  width: 64px;
+  height: 64px;
   border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--glass-border);
   flex-shrink: 0;
 }
 
@@ -506,7 +511,7 @@ footer {
   .nav-section { padding: 3rem 1rem; }
   .insect-section { padding: 3rem 1rem; }
   .insect-content { gap: 1.5rem; }
-  .insect-header .icon { width: 48px; height: 48px; font-size: 2rem; }
+  .insect-header .icon { width: 48px; height: 48px; }
   .video-tabs { gap: 0.3rem; }
   .video-tab { padding: 0.4rem 0.8rem; font-size: 0.8rem; }
 }
@@ -586,31 +591,31 @@ footer {
   <p class="section-subtitle">点击卡片查看对应昆虫的3D建模展示</p>
   <div class="nav-grid">
     <a href="#xiaodilaohu" class="nav-card" style="--card-glow: rgba(139,90,43,0.3)">
-      <span class="icon">🦗</span>
+      <img class="icon" src="images/xiaodilaohu.png" alt="小地老虎">
       <div class="name">小地老虎</div>
       <div class="latin">Agrotis ipsilon</div>
       <div class="count">2个模型</div>
     </a>
     <a href="#xiewenyee" class="nav-card" style="--card-glow: rgba(107,142,35,0.3)">
-      <span class="icon">🦋</span>
+      <img class="icon" src="images/xiewenyee.png" alt="斜纹夜蛾">
       <div class="name">斜纹夜蛾</div>
       <div class="latin">Spodoptera litura</div>
       <div class="count">1个模型</div>
     </a>
     <a href="#taozhuming" class="nav-card" style="--card-glow: rgba(205,133,63,0.3)">
-      <span class="icon">🪰</span>
+      <img class="icon" src="images/taozhuming.png" alt="桃蛀螟">
       <div class="name">桃蛀螟</div>
       <div class="latin">Conogethes punctiferalis</div>
       <div class="count">2个模型</div>
     </a>
     <a href="#mianlingchong" class="nav-card" style="--card-glow: rgba(50,150,80,0.3)">
-      <span class="icon">🐛</span>
+      <img class="icon" src="images/mianlingchong.png" alt="棉铃虫">
       <div class="name">棉铃虫</div>
       <div class="latin">Helicoverpa armigera</div>
       <div class="count">2个模型</div>
     </a>
     <a href="#yumiming" class="nav-card" style="--card-glow: rgba(218,165,32,0.3)">
-      <span class="icon">🌾</span>
+      <img class="icon" src="images/yumiming.png" alt="玉米螟">
       <div class="name">玉米螟</div>
       <div class="latin">Ostrinia furnacalis</div>
       <div class="count">3个模型</div>
@@ -622,7 +627,7 @@ footer {
 <div class="section-divider"><hr></div>
 <section class="insect-section reveal" id="xiaodilaohu">
   <div class="insect-header">
-    <div class="icon">🦗</div>
+    <img class="icon" src="images/xiaodilaohu.png" alt="小地老虎">
     <div>
       <h2>小地老虎</h2>
       <div class="latin-name">Agrotis ipsilon</div>
@@ -662,7 +667,7 @@ footer {
 <div class="section-divider"><hr></div>
 <section class="insect-section reveal" id="xiewenyee">
   <div class="insect-header">
-    <div class="icon">🦋</div>
+    <img class="icon" src="images/xiewenyee.png" alt="斜纹夜蛾">
     <div>
       <h2>斜纹夜蛾</h2>
       <div class="latin-name">Spodoptera litura</div>
@@ -697,7 +702,7 @@ footer {
 <div class="section-divider"><hr></div>
 <section class="insect-section reveal" id="taozhuming">
   <div class="insect-header">
-    <div class="icon">🪰</div>
+    <img class="icon" src="images/taozhuming.png" alt="桃蛀螟">
     <div>
       <h2>桃蛀螟</h2>
       <div class="latin-name">Conogethes punctiferalis</div>
@@ -737,7 +742,7 @@ footer {
 <div class="section-divider"><hr></div>
 <section class="insect-section reveal" id="mianlingchong">
   <div class="insect-header">
-    <div class="icon">🐛</div>
+    <img class="icon" src="images/mianlingchong.png" alt="棉铃虫">
     <div>
       <h2>棉铃虫</h2>
       <div class="latin-name">Helicoverpa armigera</div>
@@ -777,7 +782,7 @@ footer {
 <div class="section-divider"><hr></div>
 <section class="insect-section reveal" id="yumiming">
   <div class="insect-header">
-    <div class="icon">🌾</div>
+    <img class="icon" src="images/yumiming.png" alt="玉米螟">
     <div>
       <h2>玉米螟</h2>
       <div class="latin-name">Ostrinia furnacalis</div>
