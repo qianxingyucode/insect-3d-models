@@ -405,29 +405,20 @@ body {
   background: #000;
   border: 1px solid var(--glass-border);
   box-shadow: var(--shadow);
-  aspect-ratio: 16/9;
 }
 
 .video-wrapper video {
   width: 100%;
-  height: 100%;
-  object-fit: contain;
   display: block;
 }
 
 .video-wrapper .video-item {
-  position: absolute;
-  inset: 0;
   display: none;
 }
 
 .video-wrapper .video-item.active {
   display: block;
-}
-
-.video-wrapper .video-item.active video {
-  width: 100%;
-  height: 100%;
+  position: relative;
 }
 
 .video-label {
@@ -504,6 +495,11 @@ footer {
 }
 
 /* ============ Mobile refinements ============ */
+@media (max-width: 768px) {
+  .insect-video { width: 100%; }
+  .insect-content { gap: 2rem; }
+}
+
 @media (max-width: 480px) {
   .hero { padding: 1.5rem; min-height: 90vh; }
   .hero-badge { font-size: 0.75rem; padding: 0.4rem 1rem; }
